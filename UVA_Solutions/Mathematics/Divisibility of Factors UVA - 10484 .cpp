@@ -47,7 +47,6 @@ void task(){
                 }
             }
         }
-
         ll zero = 0;
         for(ll i = 2; i<n and !zero; i++){
             while(d%i==0){
@@ -59,6 +58,7 @@ void task(){
                 d/=i;
             }
         }
+        //if N! isn't divisible by d then ans will be 0
         if(d!=1 and (d>100 or cnt[d]==0)) zero = 1;
         else if(d!=1)cnt[d]--;
         if(zero){
@@ -67,6 +67,7 @@ void task(){
         }
         ll ans = 1;
         for(ll i = 0; i<=n;i++){
+
             ans*=cnt[i]+1;
         }
         cout << ans << endl;
@@ -87,5 +88,3 @@ int main(){
         
 return 0;
 }
-
-
