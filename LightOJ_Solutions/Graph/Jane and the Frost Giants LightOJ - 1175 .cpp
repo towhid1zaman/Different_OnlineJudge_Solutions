@@ -1,10 +1,7 @@
 
 // </> : towhid1zaman
 
-#pragma GCC optimize("O3")
-#pragma GCC target("sse4")
-#pragma GCC optimize("Ofast")  
-#pragma GCC target("avx,avx2,fma") 
+
 #include "bits/stdc++.h"
 using namespace std;
 
@@ -206,5 +203,3 @@ int main(){
         
 return 0;
 }
-
-
