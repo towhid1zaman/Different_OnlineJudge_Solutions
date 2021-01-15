@@ -27,6 +27,7 @@ void sieve() {///false means prime
         }
     }
 }
+
 //DivisorCount using primefactorization
 void divisor(ll n){
     ll N = n;
