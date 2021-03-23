@@ -32,9 +32,9 @@ void task(){
         else{
             ll r, v; cin >> r >> v;
             res+= ((n-r-1) * v);
-            res-=((r-0) * v);
+            res-=(r* v);
             res-= ((n-r-1) * a[r]);
-            res+=((r-0) * a[r]);
+            res+=(r * a[r]);
             a[r] = v;
         }
     }
