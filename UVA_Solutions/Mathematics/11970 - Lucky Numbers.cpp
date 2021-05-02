@@ -15,7 +15,15 @@ typedef std::vector<ll> vll;
 const double pi = acos(-1.0);
 const int maxn = 200005;
 const int mod = 1000000007;
+/*
+X/sqrt(N-X)
 
+X must be divisible by sqrt(N-X), and N-X must be perfect square
+
+let it i^2
+so, N-X = i*i => X = N - i*i;
+
+*/
 void task(){
     ll n; cin >> n;
     vll X;
