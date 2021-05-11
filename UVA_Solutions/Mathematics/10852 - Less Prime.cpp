@@ -33,14 +33,14 @@ void task(){
     cin >> n;
     int ans = 0, rem = 0;
     for(int i = 2; i<=n; i++){
+      int x = n/2 + 1;
       if(isp(i)){
-        if(rem < n%i){
-          ans = i;
-          rem = n%i;
+        if(i>=x){
+          cout << i << endl;
+          break;
         }
       }
     }
-    cout << ans << endl;
 }
 
 int main(){
