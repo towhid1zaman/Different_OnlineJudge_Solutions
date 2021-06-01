@@ -1,5 +1,5 @@
 /*
-  Given an array find all possible permutaion,
+  Given an array find all possible permutaions,
   n lengths array = n! permutaions
   https://www.interviewbit.com/problems/permutations/
 */
