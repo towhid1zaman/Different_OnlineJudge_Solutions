@@ -20,7 +20,12 @@ void task(){
             dp[i][j] += max(dp[i-1][j], dp[i-1][j+1]);
         }
     }
-
+    /*for(int i = 0; i<=2*n; i++){
+        for(int j = 0; j<=2*n; j++){
+            cout << dp[i][j]<<' ';
+        }
+        cout << endl;
+    }*/
     cout << dp[2*n-1][1] << endl;
 }
 
@@ -33,7 +38,7 @@ int main(){
 
     int T = 1; cin >> T;
     for(int __ = 1; __ <= T; __++){
-        cout <<"Case "<<__<<": ";
+       // cout <<"Case "<<__<<": ";
         task();
     }
       
