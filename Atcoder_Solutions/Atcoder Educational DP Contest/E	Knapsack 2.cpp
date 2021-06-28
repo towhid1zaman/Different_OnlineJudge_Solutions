@@ -16,7 +16,6 @@ const double pi = acos(-1.0);
 const int maxn = 3001;
 const int mod = 1000000007;
 
-
 template <class T>
 struct knapsack{
     /*
