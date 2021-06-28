@@ -38,7 +38,10 @@ void task(){
             else dp[i][j] = -mod;
         }
     }    
-
+    if(dp[n][m] == -mod){
+        cout << 0 << endl;
+        return;
+    }
     int ans = go(n, m);
     cout << ans << endl;
 }
