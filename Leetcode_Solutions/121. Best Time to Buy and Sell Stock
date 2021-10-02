@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        vector<int>mn(prices.size(), INT_MAX), mx(prices.size(), INT_MIN);
+        for(int i = 0; i<(int)prices.size(); i++){
+            if(!i)mn[i] = prices[i];
+            else mn[i] = min(mn[i-1], prices[i]);
+        }
+        for(int i = (int)prices.size()-1; i>=0; i--){
+            if(i==(int)prices.size()-1)mx[i] = prices[i];
+            else mx[i] =max(mx[i+1], prices[i]);
+        }
+        int ans = INT_MIN;
+        for(int i = 0; i<(int)prices.size()-1; i++){
+            ans = max(mx[i+1] - mn[i], ans);
+        }
+        return max(0, ans);
+    }
+};
