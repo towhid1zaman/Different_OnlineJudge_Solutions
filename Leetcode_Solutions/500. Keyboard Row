@@ -1,0 +1,35 @@
+class Solution {
+public:
+    vector<string> findWords(vector<string>& words) {
+        map<char, int>r1, r2, r3;
+        string s = "qwertyuiop";
+        for(char c : s){
+            r1[c] = 1;
+            r1[toupper(c)] = 1;
+        }
+        s = "asdfghjkl";
+        for(char c : s){
+            r2[c] = 1;
+            r2[toupper(c)] = 1;
+        }
+        s = "zxcvbnm";
+        for(char c : s){
+            r3[c] = 1;
+            r3[toupper(c)] = 1;
+        }
+        vector<string>ans;
+        for(string s : words){
+            int R1 = 0, R2 = 0, R3 = 0;
+            for(char c:s){
+                if(r1[c])R1++;
+                else if(r2[c])R2++;
+                else if(r3[c])R3++;
+            }
+            if(R1 == s.size() or R2 == s.size() or R3 == s.size()){
+                ans.push_back(s);
+            }
+        }
+        return ans;
+    }
+};
+
