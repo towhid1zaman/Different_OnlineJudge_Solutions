@@ -36,7 +36,7 @@ void task(){
     }
     sort(v.begin(), v.end());
     //dbug(v);
-    priority_queue< pair<int, int> > q; // greater first(we need second, so passed -ve value)
+    priority_queue< pair<int, int> > q; // greater first(we need smaller, so passed -ve value)
     std::vector<int> ans(n, 0);
     int k = 0,last_room = 0;
     for(int i = 0; i<n; i++){
